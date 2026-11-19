@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<!--
+คู่มือจุดแก้ไขใน index.html
+[1] ชื่อเว็บไซต์/ชื่อรุ่น: <title>, .brand และข้อความใน .hero
+[2] คำอธิบายเว็บไซต์สำหรับ Search Engine: meta name="description"
+[3] โลโก้: รูปภาพ src="logo.png" ทั้ง 2 ตำแหน่ง (ต้องอยู่โฟลเดอร์เดียวกับ index.html)
+[4] เมนูและชื่อหมวด: ส่วน <nav id="mainNav">
+[5] ข้อความหน้าแรก: ส่วน <section class="hero">
+[6] การ์ดข้อมูล/คำอธิบาย: <article class="card"> แต่ละรายการใน <div class="cards">
+[7] ลิงก์หน้ารายละเอียด: เปลี่ยน href="#..." ของการ์ด/เมนูเป็นไฟล์หรือ URL จริงเมื่อมีหน้ารอง
+[8] ช่องทางออนไลน์: ค้นหา "CONTACT & SOCIAL LINKS" และแก้ URL Facebook, X, YouTube
+[9] อีเมลติดต่อ: ค้นหา engcomc1kmitl@gmail.com แล้วแก้ทั้ง href mailto และข้อความที่แสดง
+[10] สีเว็บไซต์: ตัวแปร CSS ใน :root ได้แก่ --wine, --wine2, --gold, --gold2, --bg
+[11] หมายเหตุผู้ดูแล: กล่อง .notice ใน <main>
+[12] ส่วนท้ายเว็บไซต์: <footer>
+[13] โหมดกลางวัน/กลางคืน: JavaScript ส่วน THEME; คีย์ localStorage คือ pwk-theme
+[14] ปีลิขสิทธิ์: JavaScript ที่กำหนดค่า element id="year"
+[15] แบบฟอร์มติดต่อ: แก้การตั้งค่าผู้รับ/บริการในไฟล์ contact-form.html ไม่ใช่ในไฟล์นี้
+-->
+
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -27,32 +46,32 @@
 <div class="topline"></div>
 <header>
   <div class="navwrap">
-    <a class="brand" href="#home" aria-label="กลับหน้าหลัก"><img src="assets/logo.png" alt="ตราสัญลักษณ์ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)"><span><strong>ศิษย์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)<br>วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)</strong><small>เครือข่ายศิษย์เก่าและมิตรสหาย</small></span></a>
+    <a class="brand" href="#home" aria-label="กลับหน้าหลัก"><img src="logo.png" alt="ตราสัญลักษณ์ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)"><span><strong>ศิษย์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)<br>วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)</strong><small>เครือข่ายศิษย์เก่าและมิตรสหาย</small></span></a>
     <nav id="mainNav" aria-label="เมนูหลัก">
-      <a href="#objectives">วัตถุประสงค์</a><a href="#institute">สถาบันและประวัติ</a><a href="#events">เชื่อมต่อเหตุการณ์</a><a href="#news">กระดานข้อมูลและข่าวสาร</a><a href="#contact">ติดต่อเรา</a><a href="#calendar">ปฏิทิน/แผนงาน</a><a href="#about">เกี่ยวกับเรา</a><a href="#partners">หน่วยงานที่เกี่ยวข้อง</a><a href="templates/contact-form.html">แบบฟอร์มประสานงาน</a>
+      <a href="#objectives">วัตถุประสงค์</a><a href="#institute">สถาบันและประวัติ</a><a href="#events">เชื่อมต่อเหตุการณ์</a><a href="#news">กระดานข้อมูลและข่าวสาร</a><a href="#contact">ติดต่อเรา</a><a href="#calendar">ปฏิทิน/แผนงาน</a><a href="#about">เกี่ยวกับเรา</a><a href="#partners">หน่วยงานที่เกี่ยวข้อง</a><a href="contact-form.html">แบบฟอร์มประสานงาน</a>
     </nav>
     <div class="tools"><button class="toolbtn" id="themeToggle" aria-label="สลับโหมดกลางวันและกลางคืน" title="สลับโหมดกลางวัน/กลางคืน">☾</button><button class="menu-btn" id="menuToggle" aria-label="เปิดเมนู">☰</button></div>
   </div>
 </header>
-<section class="hero" id="home"><div class="hero-inner"><div><div class="eyebrow">KMITL Computer Engineer Alumni</div><h1>ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)<br>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h1><p>พื้นที่แห่งความภาคภูมิใจ ความผูกพัน และการเชื่อมโยงเครือข่ายศิษย์เก่า เพื่อแบ่งปันข้อมูล ข่าวสาร กิจกรรม และสร้างสรรค์ประโยชน์ร่วมกัน</p><div class="actions"><a class="btn btn-gold" href="#news">✦ ข่าวสารและกิจกรรม</a><a class="btn btn-outline" href="#contact">ติดต่อเครือข่าย →</a></div></div><div class="hero-logo"><img src="assets/logo.png" alt="โลโก้ศิษย์ KMITL Computer Engineer แบบพื้นหลังโปร่งใส"></div></div></section>
+<section class="hero" id="home"><div class="hero-inner"><div><div class="eyebrow">KMITL Computer Engineer Alumni</div><h1>ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)<br>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h1><p>พื้นที่แห่งความภาคภูมิใจ ความผูกพัน และการเชื่อมโยงเครือข่ายศิษย์เก่า เพื่อแบ่งปันข้อมูล ข่าวสาร กิจกรรม และสร้างสรรค์ประโยชน์ร่วมกัน</p><div class="actions"><a class="btn btn-gold" href="#news">✦ ข่าวสารและกิจกรรม</a><a class="btn btn-outline" href="#contact">ติดต่อเครือข่าย →</a></div></div><div class="hero-logo"><img src="logo.png" alt="โลโก้ศิษย์ KMITL Computer Engineer แบบพื้นหลังโปร่งใส"></div></div></section>
 <div class="quick"><a href="#news"><b>▤ ข่าวสาร</b><span>ประกาศและข้อมูลล่าสุด</span></a><a href="#events"><b>⚙ กิจกรรม</b><span>พบปะและเชื่อมสัมพันธ์</span></a><a href="#calendar"><b>▦ ปฏิทิน</b><span>กำหนดการและแผนงาน</span></a><a href="#contact"><b>✉ ติดต่อ</b><span>ช่องทางประสานงาน</span></a></div>
 <main>
   <div class="section-head"><small>INFORMATION CENTER</small><h2>ข้อมูลและบริการของเครือข่าย</h2><p>เลือกหัวข้อเพื่ออ่านข้อมูล หรือเปิดหน้าแม่แบบเพื่อเตรียมเพิ่มรายละเอียดในภายหลัง</p></div>
   <div class="cards">
-    <article class="card" id="objectives"><div class="ico">🎯</div><h3>วัตถุประสงค์</h3><p>พื้นที่สำหรับระบุเป้าหมาย แนวทางดำเนินงาน และพันธกิจของเครือข่าย</p><a class="template-link" href="templates/template-page.html?section=objectives">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="institute"><div class="ico">🏛️</div><h3>สถาบันและประวัติ</h3><p>รวบรวมประวัติสถาบัน ความเป็นมา และเรื่องราวที่ควรค่าแก่การจดจำ</p><a class="template-link" href="templates/template-page.html?section=institute">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="events"><div class="ico">🤝</div><h3>เชื่อมต่อเหตุการณ์</h3><p>ประชาสัมพันธ์กิจกรรม การพบปะ ข่าวคราว และกิจกรรมของสมาชิก</p><a class="template-link" href="templates/template-page.html?section=events">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="news"><div class="ico">📰</div><h3>กระดานข้อมูลและข่าวสาร</h3><p>ประกาศ ข่าวประชาสัมพันธ์ บทความ และข้อมูลที่ต้องการเผยแพร่</p><a class="template-link" href="templates/template-page.html?section=news">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="calendar"><div class="ico">📅</div><h3>ปฏิทิน/แผนงาน</h3><p>กำหนดการประชุม กิจกรรมประจำปี และแผนการดำเนินงาน</p><a class="template-link" href="templates/template-page.html?section=calendar">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="about"><div class="ico">⚙️</div><h3>เกี่ยวกับเรา</h3><p>แนะนำเครือข่าย คณะทำงาน ประวัติการรวมกลุ่ม และข้อมูลสมาชิก</p><a class="template-link" href="templates/template-page.html?section=about">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="partners"><div class="ico">🔗</div><h3>หน่วยงานที่เกี่ยวข้อง</h3><p>รายชื่อหน่วยงาน สมาคม ชมรม และเครือข่ายพันธมิตร</p><a class="template-link" href="templates/template-page.html?section=partners">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card" id="webboard"><div class="ico">💬</div><h3>เว็บบอร์ด (Webboard)</h3><p>พื้นที่แลกเปลี่ยนความคิดเห็น ตั้งคำถาม และพูดคุยระหว่างสมาชิก</p><a class="template-link" href="templates/template-page.html?section=webboard">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
-    <article class="card"><div class="ico">📝</div><h3>แบบฟอร์มส่งข้อความประสานงาน</h3><p>กรอกข้อมูลเพื่อส่งเรื่องให้ผู้ประสานงานติดต่อกลับ</p><a class="template-link" href="templates/contact-form.html">เปิดแบบฟอร์มประสานงาน →</a></article>
+    <article class="card" id="objectives"><div class="ico">🎯</div><h3>วัตถุประสงค์</h3><p>พื้นที่สำหรับระบุเป้าหมาย แนวทางดำเนินงาน และพันธกิจของเครือข่าย</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="institute"><div class="ico">🏛️</div><h3>สถาบันและประวัติ</h3><p>รวบรวมประวัติสถาบัน ความเป็นมา และเรื่องราวที่ควรค่าแก่การจดจำ</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="events"><div class="ico">🤝</div><h3>เชื่อมต่อเหตุการณ์</h3><p>ประชาสัมพันธ์กิจกรรม การพบปะ ข่าวคราว และกิจกรรมของสมาชิก</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="news"><div class="ico">📰</div><h3>กระดานข้อมูลและข่าวสาร</h3><p>ประกาศ ข่าวประชาสัมพันธ์ บทความ และข้อมูลที่ต้องการเผยแพร่</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="calendar"><div class="ico">📅</div><h3>ปฏิทิน/แผนงาน</h3><p>กำหนดการประชุม กิจกรรมประจำปี และแผนการดำเนินงาน</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="about"><div class="ico">⚙️</div><h3>เกี่ยวกับเรา</h3><p>แนะนำเครือข่าย คณะทำงาน ประวัติการรวมกลุ่ม และข้อมูลสมาชิก</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="partners"><div class="ico">🔗</div><h3>หน่วยงานที่เกี่ยวข้อง</h3><p>รายชื่อหน่วยงาน สมาคม ชมรม และเครือข่ายพันธมิตร</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card" id="webboard"><div class="ico">💬</div><h3>เว็บบอร์ด (Webboard)</h3><p>พื้นที่แลกเปลี่ยนความคิดเห็น ตั้งคำถาม และพูดคุยระหว่างสมาชิก</p><a class="template-link" href="#\1">เปิดแม่แบบเพื่อเพิ่มข้อมูล →</a></article>
+    <article class="card"><div class="ico">📝</div><h3>แบบฟอร์มส่งข้อความประสานงาน</h3><p>กรอกข้อมูลเพื่อส่งเรื่องให้ผู้ประสานงานติดต่อกลับ</p><a class="template-link" href="contact-form.html">เปิดแบบฟอร์มประสานงาน →</a></article>
   </div>
-  <div class="notice"><strong>หมายเหตุสำหรับผู้ดูแล:</strong> ข้อความในหน้าแรกเป็นข้อความแนะนำเบื้องต้น ยังไม่ใช่ข้อมูลทางการของสมาคม/เครือข่าย โปรดแก้ไขรายละเอียดในส่วนที่ระบุไว้ในไฟล์ README ก่อนเผยแพร่จริง</div>
+  <div class="notice"><strong>หมายเหตุสำหรับผู้ดูแล:</strong> เนื้อหาในบางหมวดเป็นข้อความเริ่มต้น โปรดตรวจสอบและปรับปรุงข้อมูลให้เป็นปัจจุบันก่อนเผยแพร่</div>
 </main>
-<section class="about-band"><div class="about-inner"><div><h2>ร่วมสืบสานสายสัมพันธ์</h2><p>เว็บไซต์นี้จัดทำเป็นโครงสร้างเริ่มต้นสำหรับนำเสนอข้อมูลของเว็บไซต์ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535) สามารถเพิ่มเติมภาพกิจกรรม ข่าวสาร รายชื่อคณะทำงาน และข้อมูลต่าง ๆ ได้ตามความเหมาะสม</p></div><div><h2>ช่องทางออนไลน์</h2><p>เพิ่มลิงก์ช่องทางสื่อสารของเครือข่ายได้ในส่วน CONTACT & SOCIAL LINKS ของไฟล์ index.html</p><div class="socials"><a href="mailto:patumwankan@gmail.com">✉ E-mail</a><a href="#facebook">f Facebook*</a><a href="#telegram">➤ Telegram*</a><a href="#line">LINE*</a><a href="#x">𝕏 X*</a><a href="#youtube">▶ YouTube*</a><a href="#webboard">▤ Webboard</a></div></div></div></section>
-<section id="contact"><main style="padding-top:38px;padding-bottom:42px"><div class="section-head"><small>GET IN TOUCH</small><h2>ติดต่อเรา</h2><p>ติดต่อผ่านอีเมล หรือช่องทางออนไลน์ของเครือข่าย</p></div><div class="contact-grid"><div class="contact-card"><strong>อีเมลกลาง</strong><p><a href="mailto:engcomc1kmitl@gmail.com">engcomc1kmitl@gmail.com</a></p><small style="color:var(--muted)">สำหรับติดต่อสอบถามและประสานงาน</small></div><div class="contact-card"><strong>เครือข่ายสังคมออนไลน์</strong><div class="socials"><a href="#facebook">Facebook*</a><a href="#telegram">Telegram*</a><a href="#line">LINE*</a><a href="#x">X*</a><a href="#youtube">YouTube*</a><a href="#webboard">Webboard</a></div><small style="color:var(--muted)">* ลิงก์ตัวอย่าง ต้องใส่ URL จริงก่อนเปิดใช้งาน</small></div></div></main></section>
+<section class="about-band"><div class="about-inner"><div><h2>ร่วมสืบสานสายสัมพันธ์</h2><p>เว็บไซต์นี้จัดทำเป็นโครงสร้างเริ่มต้นสำหรับนำเสนอข้อมูลของเว็บไซต์ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535) สามารถเพิ่มเติมภาพกิจกรรม ข่าวสาร รายชื่อคณะทำงาน และข้อมูลต่าง ๆ ได้ตามความเหมาะสม</p></div><div><h2>ช่องทางออนไลน์</h2><p>เพิ่มลิงก์ช่องทางสื่อสารของเครือข่ายได้ในส่วน CONTACT & SOCIAL LINKS ของไฟล์ index.html</p><div class="socials"><a href="mailto:engcomc1kmitl@gmail.com">✉ E-mail</a><a href="https://www.facebook.com/profile.php?id=61596428201861&amp;locale=th_TH" target="_blank" rel="noopener noreferrer">f Facebook</a><a href="https://x.com/EngComC1KMITL" target="_blank" rel="noopener noreferrer">𝕏 X</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">▶ YouTube</a><a href="#webboard">▤ Webboard</a></div></div></div></section>
+<section id="contact"><main style="padding-top:38px;padding-bottom:42px"><div class="section-head"><small>GET IN TOUCH</small><h2>ติดต่อเรา</h2><p>ติดต่อผ่านอีเมล หรือช่องทางออนไลน์ของเครือข่าย</p></div><div class="contact-grid"><div class="contact-card"><strong>อีเมลกลาง</strong><p><a href="mailto:engcomc1kmitl@gmail.com">engcomc1kmitl@gmail.com</a></p><small style="color:var(--muted)">สำหรับติดต่อสอบถามและประสานงาน</small></div><div class="contact-card"><strong>เครือข่ายสังคมออนไลน์</strong><div class="socials"><a href="https://www.facebook.com/profile.php?id=61596428201861&amp;locale=th_TH" target="_blank" rel="noopener noreferrer">Facebook</a><a href="#telegram">Telegram*</a><a href="https://x.com/EngComC1KMITL" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a><a href="#webboard">Webboard</a></div><small style="color:var(--muted)">YouTube: โปรดเปลี่ยน URL เป็นลิงก์ช่องอย่างเป็นทางการเมื่อมี URL ช่องแล้ว</small></div></div></main></section>
 <footer><div class="footer-inner"><div><strong>เว็บไซต์ศิษย์ KMITL วศ.บ.วิศวกรรมคอมพิวเตอร์ ต่อเนื่อง 1 (2535)</strong><br><small>เว็บไซต์เครือข่ายและศูนย์รวมข้อมูลข่าวสาร</small></div><div>© <span id="year"></span> KMITL Eng.Computer 1 (2535) · สงวนสิทธิ์ตามความเหมาะสม</div></div></footer>
 <script>
   // THEME: บันทึกโหมดที่เลือกไว้ในเบราว์เซอร์ของผู้เข้าชม
