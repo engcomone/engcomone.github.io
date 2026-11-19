@@ -1,0 +1,15 @@
+
+1. สร้างผ่านหน้าเว็บ GitHub
+• เปิดหน้า Repository ที่ต้องการ
+• กด Add file > Create new file
+• ในช่องตั้งชื่อไฟล์ ให้พิมพ์ ชื่อโฟลเดอร์/ชื่อไฟล์ เช่น src/index.js หรือ docs/README.md
+• กด Commit changes... เพื่อบันทึก ระบบจะสร้างโฟลเดอร์และไฟล์ให้ทันที
+
+2. สร้างผ่านเครื่อง (Git CLI)
+
+• เปิดโฟลเดอร์โปรเจกต์ในเครื่อง
+• สร้างโฟลเดอร์และไฟล์ด้านใน (เช่น mkdir folder_name แล้วสร้างไฟล์ข้างใน)
+• รันคำสั่งเพื่อส่งขึ้น Repository:bash
+git add .
+git commit -m "Add new folder"
+git push
